@@ -22,7 +22,7 @@ export default defineNuxtConfig({
         },
       ],
     },
-    baseURL: "/we-bcn-test/",
+    baseURL: "/test-nat/",
   },
   ssr: true,
   modules: ["nuxt-simple-sitemap"],

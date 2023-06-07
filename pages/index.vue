@@ -14,13 +14,13 @@ export default {
     };
   },
   async beforeMount() {
+    console.log("holi");
     this.data = await fetch("https://bibliotech.bymotto.com/api/hubs")
       .then((res) => res.json())
       .then((data) => data.data);
     this.homeConfig = await fetch("http://bibliotech.bymotto.com/api/config")
       .then((res) => res.json())
       .then((data) => data.data);
-    ç;
 
     this.about = this.homeConfig.hide_about_us;
     this.contact = this.homeConfig.hide_contact;
