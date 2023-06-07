@@ -7,18 +7,27 @@ export default {
     this.data = await fetch("https://bibliotech.bymotto.com/api/searcher")
       .then((res) => res.json())
       .then((data) => data.data);
+    console.log(
+      "🚀 ~ file: filter.vue:10 ~ beforeMount ~ this.data:",
+      this.data
+    );
   },
   methods: {
     async applyFilters() {
+      console.log("apply filters");
       this.data = await fetch(
-        `https://bibliotech.bymotto.com/api/searcher?name=${nameName.value}&description=${description.value}`,
+        `https://bibliotech.bymotto.com/api/searcher?name=${this.nameName}&description=${this.description}`,
         {
           method: "POST",
-          body: JSON.stringify({ name: nameName, description: description }),
+          body: JSON.stringify({
+            name: this.nameName,
+            description: this.description,
+          }),
         }
       )
         .then((res) => res.json())
         .then((data) => data.data);
+      console.log("fata", this.data);
     },
   },
 };

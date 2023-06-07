@@ -35,7 +35,7 @@ export default {
       )
         .then((res) => res.json())
         .then((data) => data.data);
-      title.value = response.title;
+      this.title = response.title;
     },
   },
 };
