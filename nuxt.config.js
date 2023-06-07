@@ -2,6 +2,9 @@ import { truncate } from "fs/promises";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  router: {
+    base: "https://NataliaPuig.github.io/test-nat/",
+  },
   app: {
     head: {
       title: "We bcn test",
