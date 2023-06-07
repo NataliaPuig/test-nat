@@ -31,6 +31,9 @@ export default {
   modules: [],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
+  router: {
+    base: "https://NataliaPuig.github.io/test-nat/",
+  },
   build: {
     transpile: [/^element-ui/],
   },
